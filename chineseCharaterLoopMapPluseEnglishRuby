@@ -17,10 +17,10 @@ body{
 <body>
 <p>Paste English text here <input type="text" id="myText" value=""placeholder="Your Text Here"></p>
 <form >
-<p>Set Difficulty <input type="number" id="myNumber" value="2"></p>
+<p>Set Difficulty <input type="number" id="myNumber" value="1"></p>
 <p>Set Speed in milliseconds<input type="number" id="speed" value="1000"></p>
 </form>
-<button onclick="doFunctions();">Flash</button>
+<button onclick="doFunctions();">Translate</button>
 <p id="demo"></p>
 <script>
 var stringToReplace = " "+document.getElementById("myText").value+" ";
@@ -29,10 +29,10 @@ function doFunctions()
   englishRreplacements();
 	setDifficulty();
 	setSpeed();
-  //translate();
+  translate();
 }
 
-var difficulty=2;
+var difficulty=1;
 let linePrintLag = 600; //in milliseconds
 function setDifficulty()
 {
@@ -2311,16 +2311,12 @@ function englishRreplacements()
 	{
 		stringToReplace=stringToReplace.replaceAll(replacements[j][0],replacements[j][1]);
 	}
-	translate();
+
 }
 async function translate()
 {
 	const nextCharacterMap=
 		{
-
-
-
-
 				'阿':'啊','啊':'呵','呵':'锕','锕':'吖','吖':'阿',
 				'癌':'皑','皑':'捱','捱':'騃','騃':'癌',
 				'矮':'蔼','蔼':'嗳','嗳':'霭','霭':'靄','靄':'矮',
@@ -3601,14 +3597,11 @@ async function translate()
 		}
 		if(c%difficulty==0)
 		{
-
-			//document.getElementById("span").style.color = "#" + ((1<<24)*Math.random() | 0).toString(16);
-
 			print(stringToReplace);
 		}
 		else
 		{
-	 print(replacedString);
+	 		print(replacedString);
 		}
 	}
 	var sleep = function(ms){
