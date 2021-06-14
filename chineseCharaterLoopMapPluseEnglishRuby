@@ -3569,13 +3569,10 @@ async function translate()
 		};
 	var j=0;
 	var c=0;
-	var linePrintLag = 60; //in milliseconds
 	const print = (text) =>
 	{
 		document.body.innerHTML = text;
 	};
-
-
 	const slowlyReplaceCharacters = async (counter) => {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
@@ -3616,7 +3613,6 @@ async function translate()
 	await slowlyReplaceCharacters(c);
 	}
 }
-
 </script>
 <p>
 <a href="http://neotranslate.xyz/"> Chinese Translator </a><br>
