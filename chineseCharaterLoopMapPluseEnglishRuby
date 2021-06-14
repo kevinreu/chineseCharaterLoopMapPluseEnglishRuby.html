@@ -3586,7 +3586,7 @@ async function translate()
 
 	const replaceCharacters = (counter) => {
 
-		for (var i = 0; i < 9000; i++)//i just made i<"a big number ie 9000" and that made it iterate throught the map properly but i want to make it a more precice number
+		for (var i = 0; i <= stringToReplace.length || i < 9000; i++)//i just made i<"a big number ie 9000" and that made it iterate throught the map properly but i want to make it a more precice number
 		{
 			var currentCharacter = replacedString[i];
 			var nextCharacter = nextCharacterMap[currentCharacter] || currentCharacter;
