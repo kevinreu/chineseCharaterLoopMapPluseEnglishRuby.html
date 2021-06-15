@@ -3567,7 +3567,6 @@ async function translate()
 				'左':'佐','佐':'左',
 				'作':'做','做':'坐','坐':'座','座':'唑','唑':'酢','酢':'祚','祚':'柞','柞':'胙','胙':'怍','怍':'阼','阼':'蓙','蓙':'作'
 		};
-	var j=0;
 	var c=0;
 	const print = (text) =>
 	{
@@ -3601,10 +3600,12 @@ async function translate()
 	 		print(replacedString);
 		}
 	}
-	var sleep = function(ms){
+	var sleep = function(ms)
+	{
 		let now = Date.now(),
 				end = now + ms;
-		while (now < end) {
+		while (now < end)
+		{
 			now = Date.now();
 		}
 	};
